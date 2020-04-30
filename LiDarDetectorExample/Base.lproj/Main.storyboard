@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="LiDarDetectorExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1iJ-Ku-Ryv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLB-cR-ivy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZM-zV-A2W">
+                                <rect key="frame" x="132" y="806" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JxD-WI-DiJ"/>
+                                    <constraint firstAttribute="width" constant="150" id="vCm-4Q-9Vu"/>
+                                </constraints>
+                                <state key="normal" title="Save as OBJ"/>
+                                <connections>
+                                    <action selector="scanButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q1Q-7L-63K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bLB-cR-ivy" firstAttribute="top" secondItem="1iJ-Ku-Ryv" secondAttribute="top" id="88d-mM-hA7"/>
+                            <constraint firstAttribute="bottom" secondItem="GZM-zV-A2W" secondAttribute="bottom" constant="30" id="Irz-Hq-wYp"/>
+                            <constraint firstItem="bLB-cR-ivy" firstAttribute="leading" secondItem="EW0-x6-awj" secondAttribute="leading" id="Q7Z-YO-4Gg"/>
+                            <constraint firstAttribute="bottom" secondItem="bLB-cR-ivy" secondAttribute="bottom" id="ZCw-PD-y3o"/>
+                            <constraint firstItem="bLB-cR-ivy" firstAttribute="trailing" secondItem="EW0-x6-awj" secondAttribute="trailing" id="exX-W7-0kM"/>
+                            <constraint firstItem="GZM-zV-A2W" firstAttribute="centerX" secondItem="1iJ-Ku-Ryv" secondAttribute="centerX" id="vA3-GH-NKI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EW0-x6-awj"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="bLB-cR-ivy" id="LNL-cI-kqN"/>
+                        <outlet property="scanButton" destination="GZM-zV-A2W" id="xyH-Go-dx3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>
